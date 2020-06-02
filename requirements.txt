@@ -9,10 +9,9 @@ Trac==0.12.3
 amqplib==1.0.2
 anyjson==0.3.1
 async==0.6.1
-chardet==1.0.1
+chardet==3.0.2
 cmsplugin-markup==0.2.2
 cmsplugin-markup-tracwiki==0.2.2
-distribute==0.7.3
 django-appconf==0.5
 django-classy-tags==0.3.4.1
 django-missing==0.1.11

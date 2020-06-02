@@ -11,9 +11,7 @@ services:
     ports:
       - "80:80"
   db:
-    build:
-      context: docker/database/
-      dockerfile: Dockerfile
+    image: tozd/postgresql:9.6
     environment:
         POSTGRESQL_USER: wlansi_cms
         POSTGRESQL_PASS: mainpage
