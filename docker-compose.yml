@@ -13,8 +13,9 @@ services:
   db:
     image: tozd/postgresql:9.6
     environment:
-        POSTGRESQL_USER: wlansi_cms
-        POSTGRESQL_PASS: mainpage
-        POSTGRESQL_DB: wlansi
+      PGSQL_ROLE_1_USERNAME: wlansi_cms
+      PGSQL_ROLE_1_PASSWORD: mainpage
+      PGSQL_DB_1_NAME: wlansi
+      PGSQL_DB_1_OWNER: wlansi_cms
     expose:
-      - 5432
+      - 5432/tcp

@@ -23,13 +23,15 @@ ADMINS = ()
 
 MANAGERS = ADMINS
 
-DB_PASSWORD = os.environ.get('DB_PASSWORD', 'mainpage')
+DB_USER = os.environ.get('PGSQL_ROLE_1_USERNAME', 'wlansi_cms')
+DB_PASSWORD = os.environ.get('PGSQL_ROLE_1_PASSWORD', 'mainpage')
+DB_NAME = os.environ.get('PGSQL_DB_1_NAME', 'wlansi')
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'wlansi',
-        'USER': 'wlansi_cms',
+        'NAME': DB_NAME,
+        'USER': DB_USER,
         'PASSWORD': DB_PASSWORD,
         'HOST': 'db',
         'PORT': '',
@@ -60,7 +62,8 @@ LOCALE_PATHS = (
 
 ADMIN_LANGUAGE_CODE = 'en'
 
-GEOIP_PATH = 'libs/geoip/'
+# GEOIP_PATH = 'libs/geoip/'
+GEOIP_PATH = '/usr/share/GeoIP/'
 DEFAULT_COUNTRY = 'SI'
 
 URL_VALIDATOR_USER_AGENT = 'Django'

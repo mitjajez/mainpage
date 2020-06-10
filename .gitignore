@@ -11,3 +11,4 @@
 *.sqlite
 *.sqlite-journal
 .*
+/venv/
